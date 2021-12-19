@@ -44,7 +44,7 @@ with zipfile.ZipFile("flickr30k.zip", 'r') as zip_ref:
 
 
 os.system("pwd")
-st.write(os.listdir())
+st.write(os.listdir("image_data"))
 st.write("đã giải nén")
 
 
