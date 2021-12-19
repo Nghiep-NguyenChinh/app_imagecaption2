@@ -6,8 +6,9 @@ from whoosh import scoring
 from whoosh.index import open_dir
 import sys
 import json
-from IPython import display
+# from IPython import display
 import base64
+import streamlit as st
 
 def createSearchableData(root, save_ix=None):
     '''
@@ -71,14 +72,15 @@ def main(query_str):
     with ix.searcher(weighting=scoring.PL2) as searcher:
         query = QueryParser("content", ix.schema).parse(query_str)
         results = searcher.search(query,limit=topN)
-        print(len(results))
+        st.write(len(results))
         urls = []
         scores = []
         for i in range(min(topN, len(results))):
           urls.append(os.path.join(img_dir, results[i]['imgID']+'.jpg'))
           scores.append(results[i].score)
         html = append_to_html(query_str, urls, scores)
-    print(time.time()-st)
+    st.write(time.time()-st)
 
 
-    display.HTML(html)
+#     display.HTML(html)
+    st.write(html)
