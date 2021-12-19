@@ -38,8 +38,9 @@ def download_data(url, output):
 
 #tai data_flick30k.zip
 download_data(url_data, output_data)
-os.system("unzip flickr30k.zip -d image_data")
-
+#os.system("unzip flickr30k.zip -d image_data")
+os.system("pwd")
+st.write(os.listdir())
 st.write("đã giải nén")
 
 
