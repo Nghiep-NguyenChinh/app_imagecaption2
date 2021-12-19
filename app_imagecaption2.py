@@ -34,11 +34,15 @@ st.write("Bắt đầu dowload")
 def download_data(url, output):      
     if (os.path.exists(output)==False):
         gdown.download(url, output, quiet=False)
-
-
 #tai data_flick30k.zip
 download_data(url_data, output_data)
-os.system("unzip flickr30k.zip -d image_data")
+
+import zipfile
+with zipfile.ZipFile("flickr30k.zip", 'r') as zip_ref:
+    zip_ref.extractall("image_data")
+
+
+
 os.system("pwd")
 st.write(os.listdir())
 st.write("đã giải nén")
