@@ -44,11 +44,10 @@ download_data(url_data, output_data)
 download_data(url_json, root)
 download_data(url_search_sys, search_sys)
 
-# import zipfile
-# with zipfile.ZipFile("flickr30k.zip", 'r') as zip_ref:
-#     zip_ref.extractall("image_data")
-
 import zipfile
+with zipfile.ZipFile("flickr30k.zip", 'r') as zip_ref:
+    zip_ref.extractall()
+
 with zipfile.ZipFile(search_sys, 'r') as zip_ref:
     zip_ref.extractall()
 #folder_sys
@@ -56,7 +55,7 @@ save_ix = "Search_Sys"
 
 
 os.system("pwd")
-st.write(os.listdir("image_data/flickr30k_images"))
+st.write(os.listdir())
 st.write("đã giải nén")
 
 
