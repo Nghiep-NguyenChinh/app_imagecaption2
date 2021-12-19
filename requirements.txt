@@ -1,2 +1,3 @@
 gdown
 Whoosh
+wget
