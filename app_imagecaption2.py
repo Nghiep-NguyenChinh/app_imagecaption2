@@ -1,6 +1,7 @@
 
 import streamlit as st
 import  os
+import search_system
 # import requests
 # Import libraries
 # sys.path.append("app_imagecaption_")
@@ -67,8 +68,9 @@ option = st.selectbox('Chọn model',('CLIP_', 'Yolov4'))
 #################
 #### MAIN
 ################
-img_l = st.file_uploader("Upload Image",type=['jpg'])
+# img_l = st.file_uploader("Upload Image",type=['jpg'])
 
 
 button = st.button("Bắt đầu tạo caption")
-
+if button:
+    search_system.main()    
