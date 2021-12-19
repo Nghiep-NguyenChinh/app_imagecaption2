@@ -30,12 +30,9 @@ st.markdown("""
             , unsafe_allow_html=True)
 
 st.write("Bắt đầu dowload")
-#Ham tải về
-##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
-##
+
 def download_data(url, output):      
     if (os.path.exists(output)==False):
-        #st.write("Đang lấy file %s..." % name)
         gdown.download(url, output, quiet=False)
 
 
@@ -58,5 +55,4 @@ img_l = st.file_uploader("Upload Image",type=['jpg'])
 
 
 button = st.button("Bắt đầu tạo caption")
-if button:
-    clip_pre.upload_image(img_l)
+
