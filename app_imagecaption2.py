@@ -1,4 +1,4 @@
-https://drive.google.com/uc?id=1h4Aa2zqOZu7XPdg-pWW5KmHLxqbvs1jn
+
 import streamlit as st
 import  os
 # import requests
@@ -6,9 +6,9 @@ import  os
 # sys.path.append("app_imagecaption_")
 
 import gdown
-
-url = "https://drive.google.com/uc?id=1-bKUmsoKXAhr-wvlaXqaQxBhEte0fUsB"
-output = "model_weights.pt"
+# data flick30k
+url_data = "https://drive.google.com/uc?id=1h4Aa2zqOZu7XPdg-pWW5KmHLxqbvs1jn"
+output_data = "flickr30k.zip"
 
 
 
@@ -33,17 +33,17 @@ st.write("Bắt đầu dowload")
 #Ham tải về
 ##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
 ##
-def download(url, output):      
+def download_data(url, output):      
     if (os.path.exists(output)==False):
         #st.write("Đang lấy file %s..." % name)
         gdown.download(url, output, quiet=False)
 
 
-#st.write("Đang lấy file weights...")
-download(url, output)
+#tai data_flick30k.zip
+download_data(url_data, output_data)
+os.system("unzip flickr30k.zip -d image_data")
 
-import clip_pre
-st.write("Trạng thái: Sẵn sàng")
+st.write("đã giải nén")
 
 
 option = st.selectbox('Chọn model',('CLIP_', 'Yolov4'))
