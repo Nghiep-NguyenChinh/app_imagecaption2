@@ -73,4 +73,4 @@ option = st.selectbox('Chọn model',('CLIP_', 'Yolov4'))
 
 button = st.button("Bắt đầu tạo caption")
 if button:
-    search_system.main()    
+    search_system.main("baby car")    
