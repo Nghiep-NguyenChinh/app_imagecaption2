@@ -56,29 +56,29 @@ def append_to_html(query, urls, scores):
   return html
   
   
-  
-import time
-indexdir = os.path.join(save_ix, "indexdir")
-ix = open_dir(indexdir)
-img_dir = "image_data/flickr30k_images"
- 
-# query_str is query string
-query_str = 'the men drive the car'
-query_str = query_str.replace(' ', ' OR ')
-# Top 'n' documents as result
-topN = int(10)
-st = time.time() 
-with ix.searcher(weighting=scoring.PL2) as searcher:
-    query = QueryParser("content", ix.schema).parse(query_str)
-    results = searcher.search(query,limit=topN)
-    print(len(results))
-    urls = []
-    scores = []
-    for i in range(min(topN, len(results))):
-      urls.append(os.path.join(img_dir, results[i]['imgID']+'.jpg'))
-      scores.append(results[i].score)
-    html = append_to_html(query_str, urls, scores)
-print(time.time()-st)
+def main(query_str):
+    import time
+    indexdir = os.path.join(save_ix, "indexdir")
+    ix = open_dir(indexdir)
+    img_dir = "image_data/flickr30k_images"
+
+    # query_str is query string
+    
+    query_str = query_str.replace(' ', ' OR ')
+    # Top 'n' documents as result
+    topN = int(10)
+    st = time.time() 
+    with ix.searcher(weighting=scoring.PL2) as searcher:
+        query = QueryParser("content", ix.schema).parse(query_str)
+        results = searcher.search(query,limit=topN)
+        print(len(results))
+        urls = []
+        scores = []
+        for i in range(min(topN, len(results))):
+          urls.append(os.path.join(img_dir, results[i]['imgID']+'.jpg'))
+          scores.append(results[i].score)
+        html = append_to_html(query_str, urls, scores)
+    print(time.time()-st)
 
 
-display.HTML(html)
+    display.HTML(html)
