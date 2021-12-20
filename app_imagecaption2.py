@@ -1,7 +1,7 @@
 
 import streamlit as st
 import  os
-import search_system
+
 # import requests
 # Import libraries
 # sys.path.append("app_imagecaption_")
@@ -71,6 +71,7 @@ os.system("pwd")
 st.write(os.listdir("Flickr30k"))
 st.write("đã giải nén")
 
+import search_system
 
 option = st.selectbox('Chọn model',('CLIP_', 'Yolov4'))
 #st.write('You selected:', option)
