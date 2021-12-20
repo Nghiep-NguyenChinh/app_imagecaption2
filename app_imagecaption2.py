@@ -13,7 +13,7 @@ url_data = "https://drive.google.com/uc?id=136_IKI3j8AqdTs2G2JgT8fg-ezTM9eZi"
 output_data = "flickr30k.zip"
 
 # predict_flicrk30k
-url_json = "https://drive.google.com/uc?id=1175qCLlLyI5pC0iXUrltAdqfMR0AvCkF"
+url_json = "https://drive.google.com/uc?id=1QkKLq1Q-xAwJDiU3lN8pn5OgiCopJ4is"
 root = "predict_flicrk30k.json"
 
 url_search_sys =  "https://drive.google.com/uc?id=16gUqEan81aq2SY4Se4wBX3d6WRZ9KSjn"
