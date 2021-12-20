@@ -53,7 +53,7 @@ st.write("Bắt đầu dowload")
 
 # #tai data_flick30k.zip
 # download_data(url_data, output_data)
-download_data(url_json, root)
+# download_data(url_json, root)
 # download_data(url_search_sys, search_sys)
 
 def download(url, name):      
