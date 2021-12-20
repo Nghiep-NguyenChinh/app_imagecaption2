@@ -58,10 +58,10 @@ download_data(url_search_sys, search_sys)
 
 
 import zipfile
-with zipfile.open(output_data) as zip_ref:
+with zipfile.ZipFile(output_data) as zip_ref:
     zip_ref.extractall()
 
-import zipfile
+
 with zipfile.ZipFile(search_sys, 'r') as zip_ref:
     zip_ref.extractall()
 #folder_sys
