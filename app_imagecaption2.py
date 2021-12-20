@@ -57,7 +57,7 @@ download_data(url_search_sys, search_sys)
 
 
 import zipfile
-with zipfile.ZipFile(output_data) as zip_ref:
+with zipfile.ZipFile(output_data,'r') as zip_ref:
     zip_ref.extractall()
 
 
