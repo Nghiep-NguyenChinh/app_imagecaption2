@@ -7,7 +7,7 @@ import search_system
 # sys.path.append("app_imagecaption_")
 
 import gdown
-data flick30k
+# data flick30k
 url_data = "https://drive.google.com/uc?id=1KQOWoQAq9cvKKurhC00zqGfTfLFtIUw2"
 output_data = "flickr30k.zip"
 
