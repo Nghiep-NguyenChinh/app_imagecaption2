@@ -39,10 +39,10 @@ st.markdown("""
 st.write("Bắt đầu dowload")
 
 # liên kết gg drive
-# import zipfile
-# def download_data(url, output):      
-#     if (os.path.exists(output)==False):
-#         gdown.download(url, output, quiet=False)
+import zipfile
+def download_data(url, output):      
+    if (os.path.exists(output)==False):
+        gdown.download(url, output, quiet=False)
 #         # giai nen data
 #         with zipfile.ZipFile(output,'r') as zip_ref:
 #             zip_ref.extractall()
@@ -52,33 +52,33 @@ st.write("Bắt đầu dowload")
 #         wget.download(url)
 
 # #tai data_flick30k.zip
-# download_data(url_data, output_data)
-# download_data(url_json, root)
-# download_data(url_search_sys, search_sys)
+download_data(url_data, output_data)
+download_data(url_json, root)
+download_data(url_search_sys, search_sys)
 
-def download(url, name):      
-    if (os.path.exists(name)==False):
-        #st.write("Đang lấy file %s..." % name)
-        w = requests.get(url).content  # lấy nội dung url
-        with open(name,'wb') as f:
-            st.write(f.write(w))   # in ra màn hình
-        f.close()
+# def download(url, name):      
+#     if (os.path.exists(name)==False):
+#         #st.write("Đang lấy file %s..." % name)
+#         w = requests.get(url).content  # lấy nội dung url
+#         with open(name,'wb') as f:
+#             st.write(f.write(w))   # in ra màn hình
+#         f.close()
 
-def download_json(url, output):      
-    if (os.path.exists(output)==False):
-        gdown.download(url, output, quiet=False)
+# def download_json(url, output):      
+#     if (os.path.exists(output)==False):
+#         gdown.download(url, output, quiet=False)
 def giainen(file):
     with zipfile.ZipFile(file,'r') as zip_ref:
         zip_ref.extractall()
     
-#st.write("Đang lấy file weights...")
-download('https://archive.org/download/flickr30k_images/Search_Sys.zip', 'Search_Sys.zip')
-download('https://archive.org/download/flickr30k_images/flickr30k_images.zip', 'flickr30k_images.zip')
+# #st.write("Đang lấy file weights...")
+# download('https://archive.org/download/flickr30k_images/Search_Sys.zip', 'Search_Sys.zip')
+# download('https://archive.org/download/flickr30k_images/flickr30k_images.zip', 'flickr30k_images.zip')
 
 giainen('Search_Sys.zip')
 giainen('flickr30k_images.zip')
 
-download_json(url_json, root)
+# download_json(url_json, root)
 
 
 #folder_sys
