@@ -57,12 +57,12 @@ def append_to_html(query, urls, scores):
   return html
   
   
-def main(query_str):
-    import time
-    indexdir = os.path.join(save_ix, "indexdir")
-    ix = open_dir(indexdir)
-    img_dir = "image_data/flickr30k_images"
 
+import time
+indexdir = os.path.join(save_ix, "indexdir")
+ix = open_dir(indexdir)
+img_dir = "Flickr30k/flickr30k_images"
+def main(query_str):
     # query_str is query string
     
     query_str = query_str.replace(' ', ' OR ')
