@@ -8,7 +8,8 @@ import search_system
 
 import gdown
 # data flick30k
-url_data = "https://drive.google.com/uc?id=1KQOWoQAq9cvKKurhC00zqGfTfLFtIUw2"
+# url_data = "https://drive.google.com/uc?id=1KQOWoQAq9cvKKurhC00zqGfTfLFtIUw2"
+url_data = "https://drive.google.com/uc?id=136_IKI3j8AqdTs2G2JgT8fg-ezTM9eZi"
 output_data = "flickr30k.zip"
 
 # predict_flicrk30k
