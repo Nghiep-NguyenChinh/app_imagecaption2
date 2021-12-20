@@ -68,7 +68,7 @@ save_ix = "Search_Sys"
 
 
 os.system("pwd")
-st.write(os.listdir("Flickr30k"))
+st.write(os.listdir("Search_Sys"))
 st.write("đã giải nén")
 
 import search_system
