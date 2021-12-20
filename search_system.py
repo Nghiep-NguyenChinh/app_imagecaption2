@@ -61,7 +61,7 @@ def append_to_html(query, urls, scores):
 import time
 indexdir = os.path.join(save_ix, "indexdir")
 ix = open_dir(indexdir)
-img_dir = "Flickr30k/flickr30k_images"
+img_dir = "Flickr30k/images"
 def main(query_str):
     # query_str is query string
     
