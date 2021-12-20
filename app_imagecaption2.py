@@ -51,7 +51,6 @@ def download_data_2(url, output):
         wget.download(url)
 #tai data_flick30k.zip
 download_data(url_data, output_data)
-# download_data_2(url_data, output_data)
 download_data(url_json, root)
 download_data(url_search_sys, search_sys)
 
